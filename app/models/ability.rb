@@ -12,9 +12,8 @@ class Ability
   if user.admin?
     can :manage, :all
   else
-    can :read, :all
-    can [:create, :update, :destroy], Group, user_id: user.id
-    can [:create, :update, :destroy], Entity, user_id: user.id
+    can [:create, :update, :destroy,:read], Group, user_id: user.id
+    can [:create, :update, :destroy,:read], Entity, user_id: user.id
   end
     # The first argument to `can` is the action you are giving the user
     # permission to do.

@@ -1,0 +1,28 @@
+<section class="home-container">
+  <%=render "flash"%>
+  <div class="home-title-container align-items-start grid-container">
+    <%@groups.each do |category|%>
+    <div class="container">
+      <div class="row ">
+        <div class="col-4">
+          <img src="<%=category.icon%>" alt="<%=category.name%>" width="100%">
+        </div>
+        <div class="col-6"><%=category.name%></div>
+        <div class="col-2">
+          <%if category.entities.length>0%>
+              <%
+              sum = category.entities.sum { |i| i.amount   }
+              %>
+              <p>$ <%= sum %></p>
+            <%else%>
+                <p> $ <%= 0 %></p>
+            <%end%>
+        </div>
+      </div>
+    </div>
+    <%end%>
+  </div>
+  <div class="home-nav-container">
+    <%=link_to "Add Group" , new_user_group_path(current_user), class:"btn large-button green-btn "%>
+  </div>
+</section>

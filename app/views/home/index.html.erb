@@ -1,1 +1,14 @@
-<h1>home page place holder</h1>
+<section class="home-container">
+  <%=render "groups/flash"%>
+  <div class="home-title-container">
+    <h1 class="text-center">Budget.IO</h1>
+  </div>
+  <div class="home-nav-container">
+    <%if user_signed_in?%>
+      <%=button_to "Log out" ,destroy_user_session_path, class:"btn large-button main-btn" , method: :delete%>
+    <%else%>
+      <%=link_to "Log In" ,user_session_path, class:"btn large-button main-btn"%>
+      <%=link_to "Sign Up" ,new_user_registration_path, class:"btn large-button"%>
+    <%end%>
+  </div>
+</section>

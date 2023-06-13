@@ -1,0 +1,24 @@
+<div class="form-container">
+  <nav class="custom-nav">
+   <%= link_to user_groups_path(current_user),class:"white-icon" do %>
+  <i class="fa-solid fa-arrow-left"></i>
+  <% end %>
+    <h4 class="title">CREATE CATEGORY</h4>
+    <button class="btn white-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+  </nav>
+   <%=render "flash"%>
+  <%= form_with model: @group, url: user_groups_path, method: :post, local: true, scope: :group do |form|  %>
+    <div class="mb-3">
+      <%= form.label :Name , class: 'form-label' %><br>
+      <%= form.text_field :name,required: true , class: "form-control" %>
+    </div>
+    <div class="mb-3">
+      <%= form.label :Icon_url  , class: 'form-label'%><br>
+      <%= form.text_field :icon,required: true , class: "form-control"  %>
+    </div>
+ 
+    <div class="actions">
+      <%= form.submit "Save" ,class: 'btn large-button main-btn'%>
+    </div>
+  <% end %>
+</div>
