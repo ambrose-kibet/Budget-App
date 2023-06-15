@@ -69,6 +69,13 @@
 
 To get a local copy up and running, follow these steps.
 
+To get this repository to your desired folder:
+
+```sh
+  cd my-folder
+  git clone https://github.com/ambrose-kibet/Budget-App.git
+```
+
 ### Prerequisites
 
 In order to run this project you need: ``` Ruby ```, ``` Rails ``` and a Database such as PostgreSQL
