@@ -58,7 +58,10 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://budgetio.onrender.com)
+- [video Demo Link](https://www.loom.com/share/d22f8ec5732846e7837ca82f81d1b074?sid=00485a83-c38a-4479-a185-373e893f4a56)
 
 <!-- GETTING STARTED -->
 
