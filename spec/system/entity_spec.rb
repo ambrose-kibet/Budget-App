@@ -4,11 +4,9 @@ RSpec.feature 'Entity', type: :feature do
   let(:user) { User.create!(name: 'apple', email: 'gramsy1@example.mail', password: '123456') }
   let(:group) { Group.create!(name: 'apple', icon: 'https://example.com/icon.png', user:) }
 
-
   before do
     sign_in user
   end
-
 
   scenario 'User creates an entity' do
     visit new_user_group_entity_path(user, group) # Assuming the form is accessed via this route

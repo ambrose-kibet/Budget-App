@@ -4,11 +4,9 @@ RSpec.describe 'Group', type: :feature do
   include Devise::Test::IntegrationHelpers
   let(:user) { User.create!(name: 'apple', email: 'gramsy1@example.mail', password: '123456') }
 
-
   before do
     sign_in user
   end
-
 
   describe 'Groups ' do
     it 'should have Add group button' do
