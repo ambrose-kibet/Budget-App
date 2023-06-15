@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Group, type: :model do
-   subject do
+  subject do
     Group.new(name: 'appple', icon: 'https://img.icons8.com/?size=512&id=FMPXwiWsNx4v&format=png')
   end
 
@@ -24,12 +24,12 @@ RSpec.describe Group, type: :model do
   describe 'associations' do
     it 'belongs to user' do
       group = Group.reflect_on_association(:user)
-      expect(group.macro).to eq(:belongs_to  )
+      expect(group.macro).to eq(:belongs_to)
     end
 
-     it 'hasand belongs to many  entities' do
+    it 'hasand belongs to many  entities' do
       group = Group.reflect_on_association(:entities)
-      expect(group.macro).to eq(:has_and_belongs_to_many  )
+      expect(group.macro).to eq(:has_and_belongs_to_many)
     end
   end
 end

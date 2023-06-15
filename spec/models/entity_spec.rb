@@ -24,12 +24,12 @@ RSpec.describe Entity, type: :model do
   describe 'associations' do
     it 'belongs to user' do
       entity = Entity.reflect_on_association(:user)
-      expect(entity.macro).to eq(:belongs_to  )
+      expect(entity.macro).to eq(:belongs_to)
     end
 
-     it 'hasand belongs to many  groups' do
+    it 'hasand belongs to many  groups' do
       entity = Entity.reflect_on_association(:groups)
-      expect(entity.macro).to eq(:has_and_belongs_to_many  )
+      expect(entity.macro).to eq(:has_and_belongs_to_many)
     end
   end
 end

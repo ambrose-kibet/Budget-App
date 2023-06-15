@@ -59,7 +59,6 @@ small, .text_small {font-size: 0.8rem;}
   min-height: calc( 100vh - 2rem);
   width: 100%;
   display: grid;
-  
   padding-top: 0rem;
 }
 

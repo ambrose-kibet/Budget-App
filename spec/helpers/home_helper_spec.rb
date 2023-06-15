@@ -11,8 +11,8 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe HomeHelper, type: :helper do
-   describe "string concat" do
-    it "concats two strings with spaces" do
+  describe 'string concat' do
+    it 'concats two strings with spaces' do
       expect('hello').to eq('hello')
     end
   end

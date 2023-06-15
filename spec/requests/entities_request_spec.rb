@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Entities", type: :request do
+RSpec.describe 'Entities', type: :request do
   include Devise::Test::IntegrationHelpers
 
   let(:user) { User.create!(name: 'apple', email: 'gramsy1@example.mail', password: '123456') }
@@ -27,5 +27,4 @@ RSpec.describe "Entities", type: :request do
       expect(response.body).to include("<h4 class='title'>CREATE TRANSACTION</h4>")
     end
   end
-
 end

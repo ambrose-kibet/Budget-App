@@ -2,7 +2,6 @@ require 'rails_helper'
 require 'capybara'
 
 RSpec.describe 'User index page:', type: :system do
-
   include Devise::Test::IntegrationHelpers
 
   describe 'sign up' do
@@ -11,13 +10,12 @@ RSpec.describe 'User index page:', type: :system do
 
       find('#user_email').set('test@test.com')
       find('#user_password').set('password')
-      fill_in 'user[password_confirmation]', with: "password"
-      fill_in 'user[name]', with: "Jon"
+      fill_in 'user[password_confirmation]', with: 'password'
+      fill_in 'user[name]', with: 'Jon'
 
-      click_on "Next"
+      click_on 'Next'
 
-      expect(page).to have_content("CATEGORIES")
+      expect(page).to have_content('CATEGORIES')
     end
   end
-
 end

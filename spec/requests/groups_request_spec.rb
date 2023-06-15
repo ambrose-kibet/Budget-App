@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Groups", type: :request do
+RSpec.describe 'Groups', type: :request do
   include Devise::Test::IntegrationHelpers
 
   let(:user) { User.create!(name: 'apple', email: 'gramsy1@example.mail', password: '123456') }
@@ -40,7 +40,7 @@ RSpec.describe "Groups", type: :request do
       expect(response).to render_template(:show)
     end
 
-     it 'check the response body includes correct text' do
+    it 'check the response body includes correct text' do
       get "/users/#{user.id}/groups/#{group.id}"
       expect(response.body).to include("<h4 class='title'>#{group.name}</h4>")
     end
