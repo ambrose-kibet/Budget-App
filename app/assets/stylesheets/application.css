@@ -150,3 +150,7 @@ small, .text_small {font-size: 0.8rem;}
   border: none;
   border-bottom: 1pt solid #ced5df;
 }
+
+.card {
+  border: none;
+}
