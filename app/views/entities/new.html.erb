@@ -1,0 +1,30 @@
+<div class="form-container">
+  <nav class="custom-nav">
+    <%= link_to user_group_path(current_user,@group),class:"white-icon" do %>
+    <i class="fa-solid fa-arrow-left"></i>
+    <% end %>
+    <h4 class="title">CREATE TRANSACTION</h4>
+    <button class="btn white-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+  </nav>
+  <%=render "groups/flash"%>
+  <div class="column col-center">
+    <%= form_with model: @entity, url: user_group_entities_path, method: :post, local: true, scope: :entity do |form|  %>
+          <div class="mb-3">
+            <%= form.label :Name , class: 'form-label' %><br>
+            <%= form.text_field :name,required: true , class: "form-control" %>
+          </div>
+          <div class="mb-3">
+            <%= form.label :amount, class: "form-label" %> 
+            <%= form.number_field :amount, step: 1, placeholder: "$50", required: true, class: "form-control" %>
+          </div>
+        <div class="mb-3">
+            <%= form.label :category, class: "form-label" %>
+            <%= form.select :group_id, @groups.map { |t| [t.name, t.id] }, {}, class: "form-control" %>
+          </div>
+        <div class="actions">
+          <%= form.submit "Add Transaction", class: "btn large-button main-btn" %>
+        </div>
+
+    <% end %>
+  </div>
+</div>

@@ -9,12 +9,12 @@ class Ability
     return unless user.present?
 
     # user ||= User.new # Guest user (not logged in)
-  if user.admin?
-    can :manage, :all
-  else
-    can [:create, :update, :destroy,:read], Group, user_id: user.id
-    can [:create, :update, :destroy,:read], Entity, user_id: user.id
-  end
+    if user.admin?
+      can :manage, :all
+    else
+      can [:create, :update, :destroy,:read], Group, user_id: user.id
+      can [:create, :update, :destroy,:read], Entity, user_id: user.id
+    end
     # The first argument to `can` is the action you are giving the user
     # permission to do.
     # If you pass :manage it will apply to every action. Other common actions

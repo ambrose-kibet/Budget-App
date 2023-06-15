@@ -1,13 +1,23 @@
 <section class="home-container">
+ <nav class="custom-nav">
+   <%= link_to user_groups_path(current_user),class:"white-icon" do %>
+  <i class="fa-solid fa-arrow-left"></i>
+  <% end %>
+    <h4 class="title">CATEGORIES</h4>
+   <%= link_to destroy_user_session_path, method: :delete, class: "white-icon btn", "data-turbo-method": "delete" do %>
+      <i class="fa-solid fa-power-off"></i>
+    <% end %>
+
+  </nav>
   <%=render "flash"%>
-  <div class="home-title-container align-items-start grid-container">
+  <div class=" align-items-start transactions-container">
     <%@groups.each do |category|%>
     <div class="container">
-      <div class="row ">
+      <div class="row align-items-center text-center">
         <div class="col-4">
           <img src="<%=category.icon%>" alt="<%=category.name%>" width="100%">
         </div>
-        <div class="col-6"><%=category.name%></div>
+        <div class="col-6"><h4 class="title"><%=link_to category.name , user_group_path(category.user,category.id)%></h4></div>
         <div class="col-2">
           <%if category.entities.length>0%>
               <%
