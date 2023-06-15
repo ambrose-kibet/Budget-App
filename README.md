@@ -113,9 +113,9 @@ To run specific  tests, execute the following command:
 
 👤 **Ambrose kibet**
 
-- GitHub: [Github](https://github.com/ambrose-kibet)
-- Twitter: [Twitter](https://twitter.com/ambrose_kibet)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ambrose-kibet/)
+- GitHub: [ambrose kibet](https://github.com/ambrose-kibet)
+- Twitter: [ambrose kibet](https://twitter.com/ambrose_kibet)
+- LinkedIn: [ambrose kibet](https://www.linkedin.com/in/ambrose-kibet/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -150,7 +150,7 @@ If you like this project please give it a ⭐️!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Thank you to microverse for setting us on this journey.
+Thank you to microverse for setting us on this journey and [Gregorie vella](https://www.behance.net/gregoirevella) for the design.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
