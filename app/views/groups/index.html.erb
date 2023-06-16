@@ -17,7 +17,7 @@
         <div class="col-4">
           <img src="<%=category.icon%>" alt="<%=category.name%>" width="100%">
         </div>
-        <div class="col-6"><h4 class="title"><%=link_to category.name , user_group_path(category.user,category.id)%></h4></div>
+        <div class="col-6"><h4 class="title"><%=link_to category.name , user_group_path(category.user,category.id) , class:"text-reset text-decoration-none"%></h4></div>
         <div class="col-2">
           <%if category.entities.length>0%>
               <%
