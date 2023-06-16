@@ -159,3 +159,7 @@ small,
 .card {
   border: none;
 }
+
+.text-dark {
+  font-weight: bold;
+}
