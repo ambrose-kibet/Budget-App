@@ -18,9 +18,9 @@
               <%
               sum = @group.entities.sum { |i| i.amount   }
               %>
-              <p>$ <%= sum %></p>
+              <p class="text-dark">$ <%= sum %></p>
             <%else%>
-                <p> $ <%= 0 %></p>
+                <p class="text-dark"> $ <%= 0 %></p>
             <%end%>
         </div>
       </div>
