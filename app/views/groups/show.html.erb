@@ -1,0 +1,41 @@
+<section class="home-container">
+  <nav class="custom-nav">
+   <%= link_to user_groups_path(current_user),class:"white-icon" do %>
+  <i class="fa-solid fa-arrow-left"></i>
+  <% end %>
+    <h4 class='title'><%=@group.name%></h4>
+    <button class="btn white-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+  </nav>
+  <%=render "flash"%>
+  <div class="transactions-container">
+    <div class="row align-items-center text-center">
+        <div class="col-3">
+          <img src="<%=@group.icon%>" alt="<%=@group.name%>" width="100%">
+        </div>
+        <div class="col-7"><h4 class="title"><%=link_to @group.name , user_group_path(@group.user,@group.id), class:"text-reset text-decoration-none" %></h4></div>
+        <div class="col-1">
+          <%if @group.entities.length>0%>
+              <%
+              sum = @group.entities.sum { |i| i.amount   }
+              %>
+              <p class="text-dark">$ <%= sum %></p>
+            <%else%>
+                <p class="text-dark"> $ <%= 0 %></p>
+            <%end%>
+        </div>
+      </div>
+    <%if @group.entities.length<1%>
+      <h4 class="title text-center">No Transactions  to display...</h4>
+    <%else%>
+      <%@group.entities.sort { |a, b| b.created_at <=> a.created_at }.each do |entity|%>
+        <div class="d-flex align-items-center justify-content-between full">
+            <h4 class="title"><%=entity.name%></h4>
+              <h4 class="title">$ <%=entity.amount%></h4>
+        </div>
+      <%end%>
+    <%end%>
+  </div>
+  <div class="home-nav-container">
+    <%=link_to "Add Transaction" , new_user_group_entity_path(current_user, @group), class:"btn large-button green-btn "%>
+  </div>
+</section>

@@ -1,0 +1,43 @@
+
+
+<div class="d-flex justify-content-center align-items-start vh-100">
+<div class="card  vw-100" >
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <nav class="custom-nav">
+    <%= link_to root_path(current_user,@group),class:"white-icon" do %>
+      <i class="fa-solid fa-arrow-left"></i>
+      <% end %>
+      <h5 class="title text-center">REGISTRATION</h5>
+       <%= f.submit "Next" , class:'btn white-icon'%>
+  </nav>
+
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+   <div class="form-group my-5">
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" ,class:'form-control form-control-lg',placeholder:"Full Name" %>
+  </div>
+
+
+  <div class="form-group my-5">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" ,class:'form-control form-control-lg',placeholder:"Email"%>
+  </div>
+
+  <div class="form-group my-5">
+   
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" ,class:'form-control form-control-lg',placeholder:"Password"%>
+  </div>
+
+  <div class="form-group my-5">
+   
+    <%= f.password_field :password_confirmation, autocomplete: "new-password"  ,class:'form-control form-control-lg',placeholder:"Password Confirmation"%>
+  </div>
+
+  
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+</div>
